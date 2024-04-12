@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<FlowPane hgap="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="1118.0" style="-fx-background-color: white;" vgap="4.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane hgap="4.0" prefHeight="244.0" prefWidth="659.0" vgap="4.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="149.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="173.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Item Category" />
+            <Label layoutX="10.0" layoutY="22.0" text="Items Type:" GridPane.columnIndex="2" />
+            <Button fx:id="btnNewStoreItem" mnemonicParsing="false" prefHeight="30.0" prefWidth="147.0" text="New Store Item..." textAlignment="CENTER" GridPane.columnIndex="3" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></Button>
+            <TableView prefHeight="172.0" prefWidth="561.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" GridPane.rowSpan="2147483647">
+              <columns>
+                <TableColumn fx:id="colItemNumber" prefWidth="75.0" text="Item#" />
+                <TableColumn fx:id="colItemName" prefWidth="256.0" text="ItemName/Description" />
+                  <TableColumn fx:id="colUnitPrice" prefWidth="132.0" text="Unit Price" />
+              </columns>
+            </TableView>
+            <ComboBox fx:id="cbxCategories" prefWidth="150.0" GridPane.columnIndex="1" />
+            <ComboBox fx:id="cbxTypes" layoutX="98.0" layoutY="14.0" prefWidth="150.0" GridPane.columnIndex="3" />
+            <Label text="Available Items" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </Label>
+         </children>
+      </GridPane>
+      <ImageView fx:id="pbxStoreItem" fitHeight="244.0" fitWidth="382.0" pickOnBounds="true" preserveRatio="true" />
+      <GridPane hgap="8.0" prefHeight="331.0" prefWidth="873.0" style="-fx-border-color: lightgrey;" vgap="8.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="93.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="335.0" minWidth="0.0" prefWidth="332.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="0.0" prefWidth="103.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="54.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="110.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.0" minWidth="10.0" prefWidth="72.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="22.0" minHeight="4.0" prefHeight="16.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="52.0" minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="89.0" style="-fx-background-color: white;" text="Selected Items" textAlignment="CENTER">
+                     <opaqueInsets>
+                        <Insets top="-15.0" />
+                     </opaqueInsets>
+                     <StackPane.margin>
+                        <Insets top="-10.0" />
+                     </StackPane.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <Label text="Item#" GridPane.rowIndex="1" />
+            <Button fx:id="btnRemove6" mnemonicParsing="false" prefHeight="29.0" prefWidth="74.0" text="Remove" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+            <Button fx:id="btnRemove1" layoutX="378.0" layoutY="69.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="74.0" text="Remove" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Button fx:id="btnRemove2" layoutX="378.0" layoutY="69.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="74.0" text="Remove" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Button fx:id="btnRemove3" layoutX="378.0" layoutY="98.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="74.0" text="Remove" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Button fx:id="btnRemove5" layoutX="378.0" layoutY="157.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="74.0" text="Remove" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <Button fx:id="btnRemove4" layoutX="11.0" layoutY="11.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="74.0" text="Remove" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <TextArea fx:id="txtItemNumber1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="92.0" GridPane.rowIndex="2" />
+            <TextArea fx:id="txtItemNumber2" layoutX="53.0" layoutY="71.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="92.0" GridPane.rowIndex="3" />
+            <TextArea fx:id="txtDescription1" layoutX="53.0" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="320.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextArea fx:id="txtItemNumber6" layoutX="11.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="92.0" GridPane.rowIndex="7" />
+            <TextArea fx:id="txtItemNumber5" layoutX="11.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="92.0" GridPane.rowIndex="6" />
+            <TextArea fx:id="txtItemNumber4" layoutX="11.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="92.0" GridPane.rowIndex="5" />
+            <TextArea fx:id="txtItemNumber3" layoutX="11.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="92.0" GridPane.rowIndex="4" />
+            <Label layoutX="11.0" layoutY="48.0" text="Sub Total" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label layoutX="11.0" layoutY="16.0" text="Qty" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label layoutX="11.0" layoutY="16.0" text="Description" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="txtQuantity1" layoutX="111.0" layoutY="72.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextArea fx:id="txtDescription6" layoutX="15.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="320.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextArea fx:id="txtDescription4" layoutX="15.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="320.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextArea layoutX="15.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="169.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextArea fx:id="txtDescription2" layoutX="15.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="320.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextArea fx:id="txtSubTotal1" layoutX="288.0" layoutY="234.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="111.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <TextArea fx:id="txtSubTotal6" layoutX="15.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="111.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <TextArea fx:id="txtSubTotal5" layoutX="15.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="111.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <TextArea fx:id="txtSubTotal3" layoutX="15.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="111.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <TextArea fx:id="txtSubTotal4" layoutX="15.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="111.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <TextArea fx:id="txtSubTotal2" layoutX="15.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="111.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Label text="Unit Price" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextArea fx:id="txtQuantity5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <TextArea fx:id="txtQuantity4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <TextArea fx:id="txtQuantity3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <TextArea fx:id="txtQuantity2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextArea fx:id="txtQuantity6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <TextArea fx:id="txtUnitPrice1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="110.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextArea fx:id="txtUnitPrice2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="110.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextArea fx:id="txtUnitPrice4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="110.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextArea fx:id="txtUnitPrice3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="110.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextArea fx:id="txtDescription3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="320.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextArea fx:id="txtUnitPrice5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="110.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextArea fx:id="txtUnitPrice6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="110.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <TextArea fx:id="txtDescription5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="320.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+         <FlowPane.margin>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </FlowPane.margin>
+         <padding>
+            <Insets left="4.0" />
+         </padding>
+      </GridPane>
+      <GridPane hgap="4.0" prefHeight="322.0" prefWidth="186.0" style="-fx-border-color: lightgrey;" vgap="4.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="103.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="81.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="96.0" text="Order Summary" GridPane.columnSpan="2" />
+            <Button mnemonicParsing="false" text="New Order" GridPane.rowIndex="7" />
+            <Button layoutX="11.0" layoutY="224.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="64.0" text="Close" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Button layoutX="82.0" layoutY="224.0" minWidth="46.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="46.0" text="Open" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="btnSave" layoutX="82.0" layoutY="194.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="168.0" text="Save" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+            <HBox fx:id="btnOpen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="180.0" GridPane.columnSpan="2" GridPane.rowIndex="6" GridPane.rowSpan="2">
+               <children>
+                  <Label text="Reciept #:">
+                     <padding>
+                        <Insets top="4.0" />
+                     </padding></Label>
+                  <TextField fx:id="txtReceiptNumber" prefHeight="26.0" prefWidth="52.0">
+                     <padding>
+                        <Insets top="3.0" />
+                     </padding></TextField>
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </HBox>
+            <Label text="Items Total:" GridPane.rowIndex="1" />
+            <Label layoutX="11.0" layoutY="49.0" text="Order Total:" GridPane.rowIndex="4" />
+            <Label layoutX="11.0" layoutY="18.0" text="Tax Amount:" GridPane.rowIndex="3" />
+            <Label layoutX="11.0" layoutY="18.0" text="Tax Rate: %" GridPane.rowIndex="2" />
+            <TextField fx:id="txtItemsTotal" text="0.00" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></TextField>
+            <TextField fx:id="txtOrderTotal" text="0.00" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtTaxAmount" layoutX="114.0" layoutY="136.0" text="0.00" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField layoutX="11.0" layoutY="14.0" text="7.75" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+         <FlowPane.margin>
+            <Insets left="6.0" />
+         </FlowPane.margin>
+         <padding>
+            <Insets left="4.0" />
+         </padding>
+      </GridPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</FlowPane>

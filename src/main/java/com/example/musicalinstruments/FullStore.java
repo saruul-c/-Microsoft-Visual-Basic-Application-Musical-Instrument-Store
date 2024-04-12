@@ -7,14 +7,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import static javafx.application.Application.launch;
-
-public class MusicStore extends Application{
+public class FullStore extends Application {
+    @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MusicalStore.class.getResource("musicStore.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1110, 610);
-        stage.centerOnScreen();
-        stage.setTitle("Item Editor");
+        FXMLLoader fxmlLoader = new FXMLLoader(MusicalStore.class.getResource("FullStore.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 750, 510);
+        stage.setTitle("Musical Instrument Store");
+
         stage.setScene(scene);
         stage.show();
     }

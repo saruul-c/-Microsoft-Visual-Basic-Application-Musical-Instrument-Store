@@ -1,15 +1,21 @@
+package com.example.musicalinstruments;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-public class PleaseProvideControllerClassName {
-
-    @FXML
+public class musicStoreController {
+    @FXML private TableView<StoreItem> tvStoreItems;
+    @FXML private TableColumn<StoreItem, String> colCategory;
+    @FXML private TableColumn<StoreItem, String> colType;
+    @FXML private TableColumn<StoreItem, String> colItemName;
+    @FXML private TableColumn<StoreItem, Double> colUnitPrice;
+    @FXML private ComboBox<String> cbxCategories;
+    @FXML private ComboBox<String> cbxTypes;
     private Button btnNewStoreItem;
 
     @FXML
@@ -35,21 +41,6 @@ public class PleaseProvideControllerClassName {
 
     @FXML
     private Button btnSave;
-
-    @FXML
-    private ComboBox<?> cbxCategories;
-
-    @FXML
-    private ComboBox<?> cbxTypes;
-
-    @FXML
-    private TableColumn<?, ?> colItemName;
-
-    @FXML
-    private TableColumn<?, ?> colItemNumber;
-
-    @FXML
-    private TableColumn<?, ?> colUnitPrice;
 
     @FXML
     private ImageView pbxStoreItem;
@@ -155,5 +146,43 @@ public class PleaseProvideControllerClassName {
 
     @FXML
     private TextArea txtUnitPrice6;
+    @FXML
+    private ListView<StoreItem> lvwStoreItems; // Assuming ListView for simplicity
 
+    private ObservableList<StoreItem> items = FXCollections.observableArrayList();
+
+    @FXML
+    public void initialize() {
+        setupTableColumns();
+        populateItems();
+        populateComboBoxes();
+    }
+
+    private void setupTableColumns() {
+        colCategory.setCellValueFactory(new PropertyValueFactory<>("category"));
+        colType.setCellValueFactory(new PropertyValueFactory<>("type"));
+        colItemName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colUnitPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        tvStoreItems.setItems(items);
+    }
+
+    private void populateItems() {
+        items.add(new StoreItem("Guitars", "Electric", "Gibson Les Paul Vintage Mahogany Electric Guitar", 745.95, "path/to/image"));
+        items.add(new StoreItem("Bass", "Electric 4-String", "Epiphone Thunderbird IV Bass", 325.85, "path/to/image"));
+        items.add(new StoreItem("Keyboards", "Synthesizers", "Alesis QS8.2 88 Key Synthesizer", 825.50, "path/to/image"));
+        // Add other items similarly
+    }
+
+    private void populateComboBoxes() {
+        ObservableList<String> categories = FXCollections.observableArrayList();
+        ObservableList<String> types = FXCollections.observableArrayList();
+        for (StoreItem item : items) {
+            if (!categories.contains(item.getCategory()))
+                categories.add(item.getCategory());
+            if (!types.contains(item.getType()))
+                types.add(item.getType());
+        }
+        cbxCategories.setItems(categories);
+        cbxTypes.setItems(types);
+    }
 }
